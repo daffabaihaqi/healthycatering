@@ -45,6 +45,7 @@ header {
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
+    
 }
 
 .cta-button:hover {
@@ -131,3 +132,10 @@ footer {
     color: #999999;
     font-weight: 800;
   }
+
+  #btn-submit {
+    margin: 20px 0px;
+    padding: 10px 50px;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
