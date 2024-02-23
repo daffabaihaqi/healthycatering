@@ -21,7 +21,7 @@ header {
 }
 
 .hero {
-    background-image: url('hero-background.jpg');
+    
     background-size: cover;
     color: #fff;
     text-align: center;
