@@ -198,8 +198,9 @@ footer {
 }
 
 .hero h1 {
-    font-weight: 100;
+    font-weight: 200;
     padding-top: 30px;
+    text-shadow: 4px 6px #0f0f0f;
 }
 
 .hero .branding {
@@ -355,6 +356,19 @@ footer {
 
 footer {
     margin-top: 100px;
-    background-color: rgb(225, 221, 11);
+    background-color: rgb(229, 229, 161);
     color: black;
+}
+
+.remark {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 450px;
+    height: auto;
+    color: #324e63;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
 }
