@@ -6,84 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Catering</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>Healthy Catering</h1>
-            <p>Your source for nutritious and delicious meals</p>
-        </div>
-    </header>
+  <div class="navbar">
+    <div class="flex">
+        <h2 class="logo">HEALTHY<span id="logotext">LICIOUS</span></h1>
 
-    <section class="hero">
-        <div class="container">
-            <img style="width: 100%;" src="assets/Screenshot (71).png" alt="">
-            <p></p>
-            <a href="#contact" class="cta-button">Consult with Us</a>
-        </div>
-    </section>
 
-    <section>
-        <div class="container">
-            <h1>Menu hari ini:</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="navbar-link">HOME</a></li>
+                <li><a href="#mealplan" class="navbar-link">PACKAGES</a></li>
+                <li><a href="" class="navbar-link">ABOUT US</a></li>
+                <li><a href="./checkout.html" class="navba"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>TASTY AND HEALTHY <span class="branding">FOOD</span> FOR EVERYONE, EVERYWHERE</h1>
+  </div>
+
+    <section class="mealplan">
+        <div class="menu-list container">
+            <h1>OUR MEAL PLAN:</h1>
             <div class="cards">
               <div class="card">
                 <div class="profile">
                   <img class="profile_images" src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FDiabetesPrediabetes.jpg&w=1920&q=75">
-                  <p>Paket ini menyajikan menu diet rendah gula dan kaya serat dengan kandungan gizi yang tetap seimbang.</p>
                   <span>DIABETES & PRE-DIABETES</span>
-                  <span>420 KKAL</span>
-                  <button type="button" id="btn-submit" onclick="addData()">BUY</button>
+                  <p>Paket ini menyajikan menu diet rendah gula dan kaya serat dengan kandungan gizi yang tetap seimbang.</p> 
+                  <button type="button" class="btn-submit" onclick="readOrderData(1)">BUY</button>
                 </div>
               </div>
               <div class="card">
                 <div class="profile">
                   <img class="profile_images" src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHipertensiStroke.jpg&w=1920&q=75">
-                  <p>Paket ini mengombinasikan menu diet rendah lemak (khususnya lemak jahat) dan rendah garam dengan kandungan gizi seimbang</p>
                   <span>HIPERTENSI & STROKE</span>
-                  <span>400 KKAL</span>
-                  <button type="button" id="btn-submit" onclick="addData()">BUY</button>
+                  <p>Paket ini mengombinasikan menu diet rendah lemak (khususnya lemak jahat) dan rendah garam dengan kandungan gizi seimbang</p>
+                  <button type="button" class="btn-submit" onclick="readOrderData(2)">BUY</button>
                 </div>
               </div>
               <div class="card">
                 <div class="profile" >
                   <img class="profile_images" src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FKolesterolJantung.jpeg&w=1920&q=75">
-                  <p>Paket ini mengombinasikan menu diet rendah lemak (khususnya lemak jahat), rendah garam, dan serat yang cukup</p>
                   <span>KOLESTEROL & JANTUNG</span>
-                  <span>410 KKAL</span>
-                  <button type="button" id="btn-submit" onclick="addData()">BUY</button>
+                  <p>Paket ini mengombinasikan menu diet rendah lemak (khususnya lemak jahat), rendah garam, dan serat yang cukup</p>
+                  <button type="button" class="btn-submit" onclick="readOrderData(3)">BUY</button>
                 </div>
               </div>
               <div class="card">
                 <div class="profile">
                   <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FMuscleBuilding.jpeg&w=1920&q=75">
-                  <p>Diet dengan menu tinggi protein dan rendah lemak, yang rancang khusus untuk meningkatkan massa otot.</p>
                   <span>MUSCLE BUILDING</span>
-                  <span>820 KKAL</span>
-                  <button type="button" id="btn-submit" onclick="addData()">BUY</button>
+                  <p>Diet dengan menu tinggi protein dan rendah lemak, yang rancang khusus untuk meningkatkan massa otot.</p>                                
+                  <button type="button" class="btn-submit" onclick="readOrderData(4)">BUY</button>
                 </div>
               </div>
             </div>
           </div>
     </section>
 
+    <section>
+      <div class="container show-order js-show-order">
+        <!-- <div class="image-container">
+          <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FDiabetesPrediabetes.jpg&w=1920&q=75" alt="">
+        </div>
+        <div class="detail-container">
+          <h1>YOUR ORDER:</h1>
+          <p>Package : Diabetes & Pra Diabetes</p>
+          <div class="js-package-duration">
+            <p>Pilih Durasi Paket</p>
+            <div class="js-duration-choice flex">
+              <div class="flex radios">
+                <input type="radio" name="durationChoice" id="" value="5">
+                <p>5 hari</p>
+              </div>
+              <div class="flex radios">
+                <input type="radio" name="durationChoice" id="" value="10">
+                <p>10 hari</p>
+              </div>
+              <div class="flex radios">
+                <input type="radio" name="durationChoice" id="" value="15">
+                <p>15 hari</p>
+              </div>
+              <div class="flex radios">
+                <input type="radio" name="durationChoice" id="" value="30">
+                <p>30 hari</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="js-package-subscription">
+          <p>Pilih Paket Berlangganan</p>
+          <div class="js-package-choice flex">
+            <div class="flex radios">
+              <input type="radio" name="packageChoice" id="" value="lunch">
+              <p>Lunch</p>
+            </div>
+            <div class="flex radios">
+              <input type="radio" name="packageChoice" id="" value="dinner">
+              <p>Dinner</p>
+            </div>
+            <div class="flex radios">
+              <input type="radio" name="packageChoice" id="" value="both">
+              <p>Lunch & Dinner</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="js-display-harga">
+          TOTAL HARGA : Rp. 5.000.000
+        </h3>
+
+        <button class="submit-button js-submit-button">
+          SUBMIT
+        </button>
+
+        <p>
+
+        </p>
+        </div> -->
+        
+      </div>
+    </section>
+
     <section class="features">
-        <div class="container">
+        <div class="container flex">
             <div class="feature">
-                <img style="border-radius: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaTIo1UCj22oQOGh5JIDRNn4kLenf7bRZzzDgATJUcQNdrdfj_inrDbC7UgR7PKkt-zgs&usqp=CAU" alt="Fresh Ingredients Icon">
+                <!-- <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Fresh Ingredients Icon"> -->
+                <i class="fa-solid fa-plate-wheat favicons"></i>
+
                 <h3>Fresh Ingredients</h3>
                 <p>We use only the freshest and finest ingredients to create healthy and flavorful dishes.</p>
             </div>
 
             <div class="feature">
-                <img style="border-radius: 20px;" src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Customizable Menus Icon">
+
+                <!-- <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Customizable Menus Icon"> -->
+                <i class="fa-solid fa-book favicons"></i>
+
                 <h3>Customizable Menus</h3>
                 <p>Tailor your catering menu to suit your preferences and dietary requirements.</p>
             </div>
 
             <div class="feature">
-                <img style="border-radius: 20px;" src="https://i.pinimg.com/236x/d6/ec/23/d6ec23c7155cb49695830707387a2e0b.jpg" alt="Professional Chefs Icon">
+
+                <!-- <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Professional Chefs Icon"> -->
+                <i class="fa-solid fa-kitchen-set favicons"></i>
+
                 <h3>Professional Chefs</h3>
                 <p>Our experienced chefs ensure that each dish is expertly crafted for your satisfaction.</p>
             </div>
@@ -117,9 +192,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Healthy Catering. All rights reserved.</p>
+            <p>&copy; 2024 Healthycious. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
