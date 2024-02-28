@@ -15,6 +15,7 @@
     <div class="flex">
         <h2 class="logo">HEALTHY<span id="logotext">LICIOUS</span></h1>
 
+
         <nav>
             <ul>
                 <li><a href="./index.html" class="navbar-link">HOME</a></li>
@@ -139,20 +140,25 @@
             <div class="feature">
                 <!-- <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Fresh Ingredients Icon"> -->
                 <i class="fa-solid fa-plate-wheat favicons"></i>
+
                 <h3>Fresh Ingredients</h3>
                 <p>We use only the freshest and finest ingredients to create healthy and flavorful dishes.</p>
             </div>
 
             <div class="feature">
+
                 <!-- <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Customizable Menus Icon"> -->
                 <i class="fa-solid fa-book favicons"></i>
+
                 <h3>Customizable Menus</h3>
                 <p>Tailor your catering menu to suit your preferences and dietary requirements.</p>
             </div>
 
             <div class="feature">
+
                 <!-- <img src="https://gorrygourmet.com/_next/image?url=https%3A%2F%2Fgorrywell.s3.ap-southeast-1.amazonaws.com%2Fprod%2Fgorrygourmet%2Fmenu%2FHealthyBox.jpeg&w=1920&q=75" alt="Professional Chefs Icon"> -->
                 <i class="fa-solid fa-kitchen-set favicons"></i>
+
                 <h3>Professional Chefs</h3>
                 <p>Our experienced chefs ensure that each dish is expertly crafted for your satisfaction.</p>
             </div>
@@ -173,14 +179,22 @@
                 <label for="message">Describe:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
 
-                <button type="submit" class="cta-button">Send Message</button>
+                <button type="submit" class="cta-button" onclick="addConsult()">Send Message</button>
             </form>
+        </div>
+        <div class="container">
+            <h2 id="titleConsult">List consult</h2>
+            <div id="container-card">
+
+            </div>
         </div>
     </section>
 
     <footer>
+      
         <div class="container">
             <p>&copy; 2024 Healthycious. All rights reserved.</p>
+            
         </div>
     </footer>
 
